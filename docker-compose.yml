@@ -1,0 +1,18 @@
+services:
+  postgres:
+    container_name: postgres-college-portal
+    image: postgres:latest
+    env_file: .env
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: college_portal_development
+    ports:
+      - "5434:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  gem_cache:

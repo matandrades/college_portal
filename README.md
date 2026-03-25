@@ -1,24 +1,35 @@
-# README
+#### Start application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+You can use Postgres, Redis and Mailcatcher through Docker, just run it:
 
-Things you may want to cover:
+```bash
+docker compose up -d
+```
 
-* Ruby version
+Finally, to start the application, run:
 
-* System dependencies
+```bash
+rails s
+```
 
-* Configuration
+#### Rubocop
 
-* Database creation
+```bash
+rubocop -D -E -S # to verify
+# or
+rubocop -D -E -S --autocorrect # to verify and fix
+```
 
-* Database initialization
+#### ERB Lint
 
-* How to run the test suite
+```bash
+erb_lint app/views # to verify
+# or
+erb_lint app/views --autocorrect # to verify and fix
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Rspec
 
-* Deployment instructions
-
-* ...
+```bash
+bundle exec rspec
+```

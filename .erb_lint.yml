@@ -1,0 +1,31 @@
+linters:
+  FinalNewline:
+    enabled: true
+  Indentation:
+    enabled: true
+    width: 2
+  TrailingWhitespace:
+    enabled: true
+  DeprecatedClasses:
+    enabled: true
+  ErbSafety:
+    enabled: false
+  AllowedScriptType:
+    enabled: false
+  Rubocop:
+    enabled: true
+    rubocop_config:
+      inherit_from:
+        - .rubocop.yml
+      Style/FrozenStringLiteralComment:
+        Enabled: false
+      Layout/InitialIndentation:
+        Enabled: false
+      Layout/TrailingEmptyLines:
+        Enabled: false
+      Layout/TrailingWhitespace:
+        Enabled: false
+      Rails/OutputSafety:
+        Enabled: false
+      Lint/UselessAssignment:
+        Enabled: false
