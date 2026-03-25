@@ -1,0 +1,9 @@
+<%= link_to "Criar um novo polo", new_admin_hub_path, class: "bg-blue-600 text-white px-7 py-2 rounded-md" %>
+
+<% if @hubs.any? %>
+    <% @hubs.each do |hub| %>
+        <p><%= hub.name %><p>
+    <% end %>
+<% else %>
+    <p>Nenhum polo cadastrado<p>
+<% end %>
